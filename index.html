@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại</title>
+</head>
+<body>
+<b>Số phút gọi</b><br><br>
+<input id="minutes" type="text"><br><br>
+<button onclick="money()">Tính cước</button><br><br>
+<b id="tien"></b>
+<script>
+  function money(){
+      let a = +document.getElementById('minutes').value
+      let b = a*600
+      let c = (a-50)*400 + 3000
+      let d = (a-200)*200 + 63000
+      if (a<50){
+          document.getElementById('tien').innerHTML = 'Tiền điện thoại là: ' +b
+      }else {
+          if (a<200){
+              document.getElementById('tien').innerHTML = 'Tiền điện thoại là: ' +c
+          }else {
+              document.getElementById('tien').innerHTML = 'Tiền điện thoại là: ' +d
+          }
+      }
+  }
+</script>
+</body>
+</html>
